@@ -38,6 +38,10 @@
             "Stenfrank\\Tests\\": "tests/"
         }
     },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "testf": "vendor/bin/phpunit --filter"
+    },
     "extra": {
         "laravel": {
             "aliases": {

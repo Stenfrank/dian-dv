@@ -59,20 +59,17 @@ class DV
     
     /**
      * Get dv
-     * @return int
+     * @return string
      */
     public function getDV()
     {
         $sum = 0;
+        $mod = null;
         
-        foreach ($this->nitArray as $key => $value) {
-            $sum += ($value * $this->multiplier[($this->length - $key)]);
-        }
+        foreach ($this->nitArray as $key => $value) $sum += ($value * $this->multiplier[($this->length - $key)]);
         
-        if (($mod = ($sum % 11)) > 1) {
-            return (11 - $mod);
-        }
+        if (($mod = ($sum % 11)) > 1) return (11 - $mod);
         
-        return $mod;
+        return (string) $mod;
     }
 }

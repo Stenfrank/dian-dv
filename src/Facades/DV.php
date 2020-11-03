@@ -12,7 +12,7 @@ class DV
     /**
      * Get dv
      * @param  int $nit
-     * @return int
+     * @return string
      */
     public static function getDv(int $nit)
     {
